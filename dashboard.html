@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>內部資料儀表板 | 卡特 AI 規劃</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">卡特 AI 規劃</a>
+      <nav class="nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我</a>
+        <a href="services.html">AI 服務</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="contact.html" class="cta">聯絡我</a>
+      </nav>
+      <button class="nav-toggle" aria-label="切換選單">☰</button>
+    </div>
+  </header>
+
+  <main class="container project-page">
+    <section class="hero">
+      <img src="images/dashboard-demo.png" alt="資料儀表板示意圖" class="hero-img" />
+      <h1>內部資料儀表板</h1>
+      <p class="lead">整合多部門數據，自動生成每日 KPI 報告的智慧儀表板。</p>
+    </section>
+
+    <section class="project-details">
+      <h2>專案簡介</h2>
+      <p>
+        為內部營運團隊設計的自動化 KPI 儀表板，
+        系統每日抓取分析資料，生成即時圖表與摘要報告，
+        協助企業快速掌握營運現況。
+      </p>
+
+      <h2>功能特色</h2>
+      <ul>
+        <li>📈 即時顯示多部門 KPI（營收、訪問量、轉換率）</li>
+        <li>🔍 篩選不同時間區段比較趨勢</li>
+        <li>📅 每日自動寄出摘要報告至 Slack / Email</li>
+        <li>📄 支援匯出 PDF 報表</li>
+      </ul>
+
+      <h2>技術架構</h2>
+      <ul class="tech-stack">
+        <li>Frontend：React + Recharts</li>
+        <li>Backend：Node.js + Express</li>
+        <li>資料來源：Google Analytics / Notion API</li>
+        <li>通知系統：Slack + Email Summary</li>
+      </ul>
+
+      <a href="portfolio.html" class="btn">← 返回作品集</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year4"></span> Carter AI Planning</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/carter20030125/" target="_blank">IG</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
