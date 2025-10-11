@@ -15,12 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle('open');
   });
 
-  // highlight current nav item
+  // highlight current nav item (simple)
   const links = document.querySelectorAll('.nav a');
   links.forEach(a=>{
-    if(location.pathname.endsWith(a.getAttribute('href')) || (a.getAttribute('href')==='index.html' && location.pathname.endsWith('/')) ) {
-      a.classList.add('active');
-    }
+    try {
+      const href = a.getAttribute('href');
+      if(location.pathname.endsWith(href) || (href==='index.html' && (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')))) {
+        a.classList.add('active');
+      }
+    } catch(e){}
   });
 
   // simple reveal on scroll
