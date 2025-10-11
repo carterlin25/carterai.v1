@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>行銷文案自動化 | 卡特 AI 規劃</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">卡特 AI 規劃</a>
+      <nav class="nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我</a>
+        <a href="services.html">AI 服務</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="contact.html" class="cta">聯絡我</a>
+      </nav>
+      <button class="nav-toggle" aria-label="切換選單">☰</button>
+    </div>
+  </header>
+
+  <main class="container project-page">
+    <section class="hero">
+      <img src="images/marketing-automation.png" alt="行銷文案自動化示意圖" class="hero-img" />
+      <h1>行銷文案自動化</h1>
+      <p class="lead">以 GPT-4 生成行銷文案與報表，支援 A/B 測試與自動發佈。</p>
+    </section>
+
+    <section class="project-details">
+      <h2>專案簡介</h2>
+      <p>
+        本專案結合 GPT 模型與社群平台 API，讓行銷團隊可快速生成多版本文案，
+        同時追蹤貼文表現數據，定期生成成效報表，實現「一鍵自動化行銷」。
+      </p>
+
+      <h2>功能特色</h2>
+      <ul>
+        <li>✍️ 自動產出 5 種風格文案（正式、幽默、感性、技術、促銷）</li>
+        <li>📊 A/B 測試互動數據分析</li>
+        <li>🕓 自動排程貼文發佈</li>
+        <li>📧 每週寄送成效報告至 Email</li>
+      </ul>
+
+      <h2>技術架構</h2>
+      <ul class="tech-stack">
+        <li>Backend：Python + Flask</li>
+        <li>API：OpenAI GPT-4 + Meta Graph API</li>
+        <li>Frontend：React Dashboard</li>
+        <li>資料儲存：Google Sheets API</li>
+        <li>通知：LINE Notify</li>
+      </ul>
+
+      <a href="portfolio.html" class="btn">← 返回作品集</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year4"></span> Carter AI Planning</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/carter20030125/" target="_blank">IG</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
