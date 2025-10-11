@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>智能客服系統（Demo） | 卡特 AI 規劃</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">卡特 AI 規劃</a>
+      <nav class="nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我</a>
+        <a href="services.html">AI 服務</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="contact.html" class="cta">聯絡我</a>
+      </nav>
+      <button class="nav-toggle" aria-label="切換選單">☰</button>
+    </div>
+  </header>
+
+  <main class="container project-page">
+    <section class="hero">
+      <img src="images/chatbot-demo.png" alt="智能客服系統示意圖" class="hero-img" />
+      <h1>智能客服系統（Demo）</h1>
+      <p class="lead">整合企業 FAQ 與 GPT-4，打造能即時理解與回覆客戶問題的 AI 客服。</p>
+    </section>
+
+    <section class="project-details">
+      <h2>專案簡介</h2>
+      <p>
+        本專案以 RAG（Retrieval-Augmented Generation）為核心，結合 GPT-4 模型，
+        能從企業內部文件與 FAQ 資料中擷取相關答案，
+        透過 Webhook 連動至網站或 LINE 官方帳號，提供智慧化客服體驗。
+      </p>
+
+      <h2>功能特色</h2>
+      <ul>
+        <li>📚 即時回答客戶常見問題，並附上資料來源連結</li>
+        <li>🔗 支援 Webhook 整合 Line / 網站客服模組</li>
+        <li>🧩 可動態更新知識庫（上傳 PDF 或 Google Sheet）</li>
+        <li>📈 提供問答紀錄統計分析</li>
+      </ul>
+
+      <h2>技術架構</h2>
+      <ul class="tech-stack">
+        <li>Frontend：Next.js + Tailwind CSS</li>
+        <li>Backend：FastAPI + PostgreSQL</li>
+        <li>AI 模型：OpenAI GPT-4 + LangChain</li>
+        <li>資料來源：Google Sheet / PDF / JSON</li>
+        <li>部署：Vercel + Cloudflare Worker</li>
+      </ul>
+
+      <a href="portfolio.html" class="btn">← 返回作品集</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year4"></span> Carter AI Planning</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/carter20030125/" target="_blank">IG</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
