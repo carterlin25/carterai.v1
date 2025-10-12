@@ -44,3 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
   reveal();
   window.addEventListener('scroll', reveal);
 });
+// 手機選單開關
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+}
+
+// 自動更新年份
+const yearSpan = document.getElementById('year4');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
