@@ -94,11 +94,19 @@
       background: #0c1320;
       border: 1px solid #1b2638;
       padding: 25px;
-      margin-top: 30px;
+      margin: 40px 0;
       border-radius: 8px;
+      text-align: center;
+    }
+    .demo h2 {
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+    .demo p {
+      color: #cdd3df;
     }
     .demo textarea {
-      width: 100%;
+      width: 90%;
       height: 80px;
       background: #0b0f19;
       border: 1px solid #2a3142;
@@ -106,6 +114,7 @@
       border-radius: 6px;
       padding: 10px;
       resize: none;
+      margin-top: 10px;
     }
     .demo button {
       margin-top: 10px;
@@ -120,7 +129,7 @@
     .demo button:hover {
       background: #00ccff;
     }
-    .demo p {
+    .demo #output {
       margin-top: 15px;
       color: #00ccff;
       min-height: 24px;
@@ -155,6 +164,15 @@
       <p class="lead">以 GPT-4 生成行銷文案與報表，支援 A/B 測試與自動發佈。</p>
     </section>
 
+    <!-- === Demo 區塊放在前面 === -->
+    <section class="demo">
+      <h2>💬 Demo</h2>
+      <p>輸入主題，即可隨機生成不同風格文案：</p>
+      <textarea id="input" placeholder="例如：新品上市、品牌活動、折扣優惠"></textarea>
+      <button onclick="generate()">生成文案</button>
+      <p id="output"></p>
+    </section>
+
     <section class="project-details">
       <h2>專案簡介</h2>
       <p>
@@ -178,14 +196,6 @@
         <li>資料儲存：Google Sheets API</li>
         <li>通知：LINE Notify</li>
       </ul>
-
-      <h2>💬 模擬體驗</h2>
-      <div class="demo">
-        <p>輸入主題，即可隨機生成不同風格文案：</p>
-        <textarea id="input" placeholder="例如：新品上市、品牌活動、折扣優惠"></textarea>
-        <button onclick="generate()">生成文案</button>
-        <p id="output"></p>
-      </div>
 
       <a href="portfolio.html" class="btn">← 返回作品集</a>
     </section>
