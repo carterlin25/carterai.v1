@@ -6,7 +6,133 @@
   <title>行銷文案自動化 | 卡特 AI 規劃</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e3e7ee;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+    }
+    .site-header, .site-footer {
+      background: #0d1524;
+      color: #e3e7ee;
+    }
+    .header-inner, .footer-inner, .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-family: "Orbitron", sans-serif;
+      font-weight: 700;
+      color: #00ccff;
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+    nav a {
+      color: #e3e7ee;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a.cta {
+      background: #0066ff;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+    .hero-img {
+      width: 240px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px #00ccff66);
+    }
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: #cdd3df;
+    }
+    .project-details {
+      background: #101623;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #0d1a2e;
+    }
+    .project-details h2 {
+      color: #00ccff;
+      margin-top: 30px;
+    }
+    .tech-stack li {
+      line-height: 2;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      background: #0066ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #00ccff;
+    }
+
+    /* === Demo 區塊 === */
+    .demo {
+      background: #0c1320;
+      border: 1px solid #1b2638;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+    .demo textarea {
+      width: 100%;
+      height: 80px;
+      background: #0b0f19;
+      border: 1px solid #2a3142;
+      color: #e3e7ee;
+      border-radius: 6px;
+      padding: 10px;
+      resize: none;
+    }
+    .demo button {
+      margin-top: 10px;
+      background: #0066ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .demo button:hover {
+      background: #00ccff;
+    }
+    .demo p {
+      margin-top: 15px;
+      color: #00ccff;
+      min-height: 24px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #8892a6;
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -53,6 +179,14 @@
         <li>通知：LINE Notify</li>
       </ul>
 
+      <h2>💬 模擬體驗</h2>
+      <div class="demo">
+        <p>輸入主題，即可隨機生成不同風格文案：</p>
+        <textarea id="input" placeholder="例如：新品上市、品牌活動、折扣優惠"></textarea>
+        <button onclick="generate()">生成文案</button>
+        <p id="output"></p>
+      </div>
+
       <a href="portfolio.html" class="btn">← 返回作品集</a>
     </section>
   </main>
@@ -61,11 +195,32 @@
     <div class="container footer-inner">
       <div>© <span id="year4"></span> Carter AI Planning</div>
       <div class="socials">
-        <a href="https://www.instagram.com/carteraiplan/" target="_blank">IG</a>
+        <a href="https://www.instagram.com/carter20030125/" target="_blank">IG</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const examples = [
+      "正式風格：我們誠摯推出全新系列，為您開啟全新體驗。",
+      "幽默風格：別再猶豫啦！這款產品比咖啡更提神 ☕️",
+      "感性風格：一份設計的用心，讓生活多一點溫度。",
+      "技術風格：採用最新 GPT 模型驅動，精準理解行銷語境。",
+      "促銷風格：限時優惠開跑！立即體驗 AI 行銷新時代。"
+    ];
+    function generate() {
+      const input = document.getElementById("input").value.trim();
+      const output = document.getElementById("output");
+      if (!input) {
+        output.textContent = "請輸入一個主題再生成文案喔～";
+        return;
+      }
+      const random = examples[Math.floor(Math.random() * examples.length)];
+      output.textContent = random;
+    }
+
+    // 自動年份
+    document.getElementById("year4").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
